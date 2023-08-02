@@ -47,7 +47,7 @@ function About (){
             of how html and css worked together while I was turning figma projects into actual websites.</p>
         </div>
         <div  className="about-picture">
-            <Image className="about-picture" ref = {myRef} src={portrait.src}/>
+            <Image className="about-picture" ref = {myRef} src={portrait.src} sizes= "100vw"/>
             <div className={opacityToggle}> </div>
         </div>
         <Carousel slides = {slides}/>
