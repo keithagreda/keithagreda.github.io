@@ -1,6 +1,7 @@
 "use client"
 import portrait from '@public/assets/image-portrait.jpg'
 import Carousel from '@components/Carousel'
+import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 function About (){
     const myRef = useRef(null);
@@ -45,9 +46,8 @@ function About (){
             frontend development started while I was working as an intern at Brigada Corporation. I was able to discover my fascination
             of how html and css worked together while I was turning figma projects into actual websites.</p>
         </div>
-        <div ref = {myRef} className="about-picture"
-            style={{backgroundImage: `url(${portrait.src})`}}
-        >
+        <div  className="about-picture">
+            <Image className="about-picture" ref = {myRef} src={portrait.src}/>
             <div className={opacityToggle}> </div>
         </div>
         <Carousel slides = {slides}/>
